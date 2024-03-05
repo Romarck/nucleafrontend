@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Consulta de Saldo de Tokens</title>
+  <link rel="stylesheet" type="text/css" href="stylesheet.css" media="screen" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ethers/6.11.1/ethers.umd.min.js"></script>
+</head>
+
+<body>
+
+
+  <header>
+    <div class="container">
+      <h1>Interação Token Debênture - ERC20</h1>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <section>
+        <h3>
+          Dados Token:
+          <span id="tokenNome">Buscando informação...</span>
+          -
+          <span id="tokenSimbolo">Buscando informação...</span>
+        </h3>
+        <h3>Total circulante: <span id="tokenTotalSupply">Buscando informação...</span></h3>
+        <h3>Rating: <span id="rating">Buscando informação...</span></h3>
+      </section>
+      <hr />
+
+      <form>
+        <input type="text" placeholder="Endereço do Cliente" id="adress-balance">
+        <input type="number" disabled placeholder="Quantidade de Tokens" id="quantidade-tokens">
+        <input type="button" value="Consultar" id="button-consulta">
+      </form>
+
+      <form>
+        <input type="text" placeholder="Conta de destino" id="conta-destino">
+        <input type="email" placeholder="Quantidade de Tokens" id="quantidade-tokensTransfer">
+        <input type="button" value="Transferir" id="button-transferir">
+      </form>
+
+      <form>
+        <input type="text" placeholder="Conta de destino" id="conta-destinoMint">
+        <input type="email" placeholder="Quantidade de Tokens" id="quantidade-tokensMint">
+        <input type="button" value="Mintar" id="button-mintar">
+      </form>
+
+      <form>
+        <input type="text" placeholder="Conta de destino" id="conta-destinoBurn">
+        <input type="email" placeholder="Quantidade de Tokens" id="quantidade-tokensBurn">
+        <input type="button" value="Burn" id="button-burn">
+      </form>
+
+      <form>
+        <input type="text" placeholder="Novo Rating" id="novo-rating">
+        <input type="text" disabled id="branco">
+        <input type="button" value="Alterar Rating" id="button-rating">
+      </form>
+
+
+
+      <script src="https://cdn.ethers.io/lib/ethers-5.5.0.min.js"></script>
+      <script src="./script.js"></script>
+
+</body>
+
+</html>
